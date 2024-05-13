@@ -1,5 +1,5 @@
-morad taya (322540964)		user: asus
-Omer presler(324179795)         user:omer
+morad taya 	user: asus
+Omer presler       user:omer
 
 Running the project:
 	1-  Use cmd and navigate to the 2 projects and run this command for both "mvn clean compile package"

@@ -1,2 +1,2 @@
 # DSP
-[a link](Assignment1/Assignment 1.pdf)
+[a link]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/m0radt/Distributed-System-Programming.git))

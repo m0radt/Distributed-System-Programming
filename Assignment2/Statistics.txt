@@ -1,0 +1,235 @@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ with local aggregation @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+######################################## MapReduce1 #################################################
+
+	Job Counters 
+		Killed map tasks=2
+		Killed reduce tasks=1
+		Launched map tasks=1824
+		Launched reduce tasks=32
+		Data-local map tasks=1824
+		Total time spent by all maps in occupied slots (ms)=11535453264
+		Total time spent by all reduces in occupied slots (ms)=6762955008
+		Total time spent by all map tasks (ms)=240321943
+		Total time spent by all reduce tasks (ms)=70447448
+		Total vcore-milliseconds taken by all map tasks=240321943
+		Total vcore-milliseconds taken by all reduce tasks=70447448
+		Total megabyte-milliseconds taken by all map tasks=369134504448
+		Total megabyte-milliseconds taken by all reduce tasks=216414560256
+	Map-Reduce Framework
+		Map input records=12368376963
+		Map output records=530626490
+		Map output bytes=13739021374
+		Map output materialized bytes=273696367
+		Input split bytes=528670
+		Combine input records=530626490
+		Combine output records=20094777
+		Reduce input groups=20094668
+		Reduce shuffle bytes=273696367
+		Reduce input records=20094777
+		Reduce output records=13395203
+		Spilled Records=40189554
+		Shuffled Maps =58336
+		Failed Shuffles=0
+		Merged Map outputs=58336
+		GC time elapsed (ms)=1502232
+		CPU time spent (ms)=123484060
+		Physical memory (bytes) snapshot=1468818255872
+		Virtual memory (bytes) snapshot=6126184071168
+		Total committed heap usage (bytes)=1324478365696
+
+ ######################################## MapReduce2 #################################################
+
+	Job Counters 
+		Killed map tasks=2
+		Killed reduce tasks=1
+		Launched map tasks=32
+		Launched reduce tasks=32
+		Data-local map tasks=32
+		Total time spent by all maps in occupied slots (ms)=49290336
+		Total time spent by all reduces in occupied slots (ms)=44462208
+		Total time spent by all map tasks (ms)=1026882
+		Total time spent by all reduce tasks (ms)=463148
+		Total vcore-milliseconds taken by all map tasks=1026882
+		Total vcore-milliseconds taken by all reduce tasks=463148
+		Total megabyte-milliseconds taken by all map tasks=1577290752
+		Total megabyte-milliseconds taken by all reduce tasks=1422790656
+	Map-Reduce Framework
+		Map input records=13395203
+		Map output records=20094668
+		Map output bytes=493075808
+		Map output materialized bytes=194617803
+		Input split bytes=3840
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=24246
+		Reduce shuffle bytes=194617803
+		Reduce input records=20094668
+		Reduce output records=6699465
+		Spilled Records=40189336
+		Shuffled Maps =1024
+		Failed Shuffles=0
+		Merged Map outputs=1024
+		GC time elapsed (ms)=38686
+		CPU time spent (ms)=468790
+		Physical memory (bytes) snapshot=36961153024
+		Virtual memory (bytes) snapshot=253328896000
+		Total committed heap usage (bytes)=33627832320
+
+
+ ######################################## MapReduce3 #################################################
+
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=32
+		Launched reduce tasks=33
+		Data-local map tasks=32
+		Total time spent by all maps in occupied slots (ms)=44526720
+		Total time spent by all reduces in occupied slots (ms)=43468896
+		Total time spent by all map tasks (ms)=927640
+		Total time spent by all reduce tasks (ms)=452801
+		Total vcore-milliseconds taken by all map tasks=927640
+		Total vcore-milliseconds taken by all reduce tasks=452801
+		Total megabyte-milliseconds taken by all map tasks=1424855040
+		Total megabyte-milliseconds taken by all reduce tasks=1391004672
+	Map-Reduce Framework
+		Map input records=6699465
+		Map output records=6699465
+		Map output bytes=295574581
+		Map output materialized bytes=147973473
+		Input split bytes=3840
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2453073
+		Reduce shuffle bytes=147973473
+		Reduce input records=6699465
+		Reduce output records=6699465
+		Spilled Records=13398930
+		Shuffled Maps =1024
+		Failed Shuffles=0
+		Merged Map outputs=1024
+		GC time elapsed (ms)=33166
+		CPU time spent (ms)=416680
+		Physical memory (bytes) snapshot=32730832896
+		Virtual memory (bytes) snapshot=253290352640
+		Total committed heap usage (bytes)=29338107904
+
+
+___________________________________________________________________________________________________________________________________
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ without local aggregation @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		 
+		
+######################################## MapReduce1 #################################################
+	Job Counters 
+		Killed map tasks=3
+		Killed reduce tasks=1
+		Launched map tasks=1824
+		Launched reduce tasks=33
+		Data-local map tasks=1824
+		Total time spent by all maps in occupied slots (ms)=11405509872
+		Total time spent by all reduces in occupied slots (ms)=6832382400
+		Total time spent by all map tasks (ms)=237614789
+		Total time spent by all reduce tasks (ms)=71170650
+		Total vcore-milliseconds taken by all map tasks=237614789
+		Total vcore-milliseconds taken by all reduce tasks=71170650
+		Total megabyte-milliseconds taken by all map tasks=364976315904
+		Total megabyte-milliseconds taken by all reduce tasks=218636236800
+	Map-Reduce Framework
+		Map input records=12368376963
+		Map output records=530626490
+		Map output bytes=13739021374
+		Map output materialized bytes=1805645110
+		Input split bytes=528670
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=20094609
+		Reduce shuffle bytes=1805645110
+		Reduce input records=530626490
+		Reduce output records=13395144
+		Spilled Records=1061252980
+		Shuffled Maps =58336
+		Failed Shuffles=0
+		Merged Map outputs=58336
+		GC time elapsed (ms)=1573151
+		CPU time spent (ms)=123647060
+		Physical memory (bytes) snapshot=1489322086400
+		Virtual memory (bytes) snapshot=6126048583680
+		Total committed heap usage (bytes)=1347170074624
+
+
+######################################## MapReduce2 #################################################
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=32
+		Launched reduce tasks=32
+		Data-local map tasks=32
+		Total time spent by all maps in occupied slots (ms)=47589840
+		Total time spent by all reduces in occupied slots (ms)=46453824
+		Total time spent by all map tasks (ms)=991455
+		Total time spent by all reduce tasks (ms)=483894
+		Total vcore-milliseconds taken by all map tasks=991455
+		Total vcore-milliseconds taken by all reduce tasks=483894
+		Total megabyte-milliseconds taken by all map tasks=1522874880
+		Total megabyte-milliseconds taken by all reduce tasks=1486522368
+	Map-Reduce Framework
+		Map input records=13395144
+		Map output records=20094609
+		Map output bytes=493074036
+		Map output materialized bytes=194677970
+		Input split bytes=3840
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=24315
+		Reduce shuffle bytes=194677970
+		Reduce input records=20094609
+		Reduce output records=6699465
+		Spilled Records=40189218
+		Shuffled Maps =1024
+		Failed Shuffles=0
+		Merged Map outputs=1024
+		GC time elapsed (ms)=38520
+		CPU time spent (ms)=481270
+		Physical memory (bytes) snapshot=36392816640
+		Virtual memory (bytes) snapshot=253244977152
+		Total committed heap usage (bytes)=33393999872
+
+
+######################################## MapReduce3 #################################################		
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=32
+		Launched reduce tasks=32
+		Data-local map tasks=32
+		Total time spent by all maps in occupied slots (ms)=44539968
+		Total time spent by all reduces in occupied slots (ms)=43900512
+		Total time spent by all map tasks (ms)=927916
+		Total time spent by all reduce tasks (ms)=457297
+		Total vcore-milliseconds taken by all map tasks=927916
+		Total vcore-milliseconds taken by all reduce tasks=457297
+		Total megabyte-milliseconds taken by all map tasks=1425278976
+		Total megabyte-milliseconds taken by all reduce tasks=1404816384
+	Map-Reduce Framework
+		Map input records=6699465
+		Map output records=6699465
+		Map output bytes=295395701
+		Map output materialized bytes=147798380
+		Input split bytes=3840
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2453073
+		Reduce shuffle bytes=147798380
+		Reduce input records=6699465
+		Reduce output records=6699465
+		Spilled Records=13398930
+		Shuffled Maps =1024
+		Failed Shuffles=0
+		Merged Map outputs=1024
+		GC time elapsed (ms)=33849
+		CPU time spent (ms)=418050
+		Physical memory (bytes) snapshot=32341852160
+		Virtual memory (bytes) snapshot=253347352576
+		Total committed heap usage (bytes)=28939649024
+
+		

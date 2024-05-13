@@ -1,0 +1,60 @@
+American Cultural Center	9.042001878692384E-10
+American Cultural Council	7.91996003383723E-10
+American Cultural Criticism	7.795966504137214E-10
+American Cultural Politics	7.77286813530715E-10
+American Cultural Anthropology	7.771258047398569E-10
+
+Cities Service Company	8.222079543390012E-10
+Cities Service Building	7.853044223309661E-10
+Cities Service Power	7.810166172935495E-10
+Cities Service Corp	7.736265909048107E-10
+Cities Service Refining	7.727263202359253E-10
+
+
+Giving away personal	7.766579026785898E-10
+Giving away free	7.755352409446599E-10
+Giving away money	7.730567605504473E-10
+Giving away possessions	7.712830813246754E-10
+Giving away prized	7.612836104805124E-10
+
+Public service commission	7.793179896512429E-10
+Public service employment	7.782554428152197E-10
+Public service programs	7.765068839984103E-10
+Public service messages	7.759149283370142E-10
+Public service costs	7.746249322489352E-10
+
+Evoked potential studies	7.894781168008647E-10
+Evoked potential correlates	7.865993285107443E-10
+Evoked potential assessment	7.759149283370142E-10
+Evoked potential evidence	7.748271346705654E-10
+Evoked potential abnormalities	7.740495378408322E-10
+
+Historical Essays Presented	7.800395570582526E-10
+Historical Essays Contributed	7.744159040180087E-10
+Historical Essays Edited	7.737867581111022E-10
+Historical Essays presented	7.732236834387756E-10
+Historical Essays contributed	7.718292374388478E-10
+
+Human Rights Law	9.34927277301439E-10
+Human Rights Act	8.362046358538326E-10
+Human Rights Council	8.107044103460919E-10
+Human Rights Education	8.06497169002322E-10
+Human Rights Quarterly	7.956143168721459E-10
+
+International Economics Department	7.933462404457684E-10
+International Economics Association	7.754580700650165E-10
+International Economics Policy	7.730567605504473E-10
+International Economics Washington	7.70368076391402E-10
+International Economics Division	7.689124935664624E-10
+
+International Education Exchange	7.823851296864954E-10
+International Education Program	7.810166172935495E-10
+International Education Relations	7.766579026785898E-10
+International Education Programs	7.753655620115238E-10
+International Education News	7.745500541164267E-10
+
+Iraqi nuclear reactor	8.406561472880098E-10
+Iraqi nuclear weapons	7.802909600092347E-10
+Iraqi nuclear program	7.778994543701356E-10
+Iraqi nuclear plant	7.714445006559042E-10
+Iraqi nuclear facility	7.698324586778851E-10

@@ -1,6 +1,6 @@
-Name + ID: 
-	Morad taya 322540964
-	Omer presler 324179795
+Name 
+	Morad taya 
+	Omer presler 
 
 ---------------------------------------
 design of the system:

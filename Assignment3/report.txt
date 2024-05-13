@@ -1,0 +1,188 @@
+Name + ID: 
+	Morad taya 322540964
+	Omer presler 324179795
+
+---------------------------------------
+design of the system:
+
+- we have 3 steps: step 1 to parse the corpus, step 2 to collect the different patterns, step 3 For training and testing the classifier
+
+
+1- step 1:
+	- building a tree for each line in the corpus, to filter all the vaild paths in the corpus.
+	
+	Map:
+		input: input file (corpus)
+		output: key: <word1 ,word2 ,pattern>
+		                pattern: for example (<word1> and other <word2>)
+				value: number of occurrences (num)
+		
+	Reducer:
+		output: key: <word1 ,word2 ,pattern>
+				value: number of occurrences (num)
+		
+		output: key: <word1 ,word2 ,pattern>
+				value: sum of nums (sum all the nums from the input)
+		
+2- step 2:
+	- count the number of the different pattern that we collected
+	- assign diferent index to every pattern
+	
+	Map:
+		input: key: <word1 ,word2 ,pattern>
+		                pattern: for example (<word1> and other <word2>)
+				value: sum of nums 
+			   
+		output: key: <word1,word2>
+				value: <pattern ,count, {True,False}>
+			 key: <*,w>
+				value: <>
+	
+	Reducer:
+		 input: key: <word1,word2>
+				value: <pattern ,count, {True,False}>
+		
+		output: key: <word1,word2,{True,False}>
+				value:<paternindex,pattern>
+			  
+				
+	
+2- step 3:
+	- build classifier, collect train and test data from step 2
+	
+	Map:
+		input: key: <word1,word2,{True,False}>
+				value:<paternindex,pattern> 
+			   
+		output: key: <{train,test},word1,word2,{T,F}>
+				value: <paternindex,pattern> 
+
+	
+	Reducer:
+		 input: key: <{train,test},word1,word2,{T,F}>
+				value: <paternindex,pattern> 
+		
+		output: key:Text
+				value: The Precision, Recall and F1 measures.
+			key: <word1 ,word2>
+				value: predicted and the actual answer to the question is  word1 hypernym of word2
+	
+	
+	
+	
+					
+
+Memory usage:
+	-  we assume that we can hold the annotated set in the memory.
+	- we asummed that we can hold array list of the size of the different pattern that we collected 
+---------------------------------------
+Communication:
+	- step1
+		* for every line in the corpus we create maximum one  of key-value 
+		Map input records=16145663
+		Map output records=136374
+		Map output bytes=4778340
+		Map output materialized bytes=2138499
+		Input split bytes=9272
+		Combine input records=136374
+		Combine output records=117030
+		Reduce input groups=116504
+		Reduce shuffle bytes=2138499
+		Reduce input records=117030
+		Reduce output records=116504
+		Spilled Records=234060
+		Shuffled Maps =1216
+		Failed Shuffles=0
+		Merged Map outputs=1216
+		GC time elapsed (ms)=32765
+		CPU time spent (ms)=479360
+		Physical memory (bytes) snapshot=44982489088
+		Virtual memory (bytes) snapshot=274823360512
+		Total committed heap usage (bytes)=42347790336
+		
+	- step2
+		
+		Map input records=116504
+		Map output records=1460
+		Map output bytes=48701
+		Map output materialized bytes=25095
+		Input split bytes=3648
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=854
+		Reduce shuffle bytes=25095
+		Reduce input records=1460
+		Reduce output records=889
+		Spilled Records=2920
+		Shuffled Maps =32
+		Failed Shuffles=0
+		Merged Map outputs=32
+		GC time elapsed (ms)=21134
+		CPU time spent (ms)=150740
+		Physical memory (bytes) snapshot=24085454848
+		Virtual memory (bytes) snapshot=110883090432
+		Total committed heap usage (bytes)=22120759296
+		
+	- step3
+		* for every line in the annotated set we create maximum one of key-value 
+		Map input records=889
+		Map output records=761
+		Map output bytes=22943
+		Map output materialized bytes=8616
+		Input split bytes=114
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=523
+		Reduce shuffle bytes=8616
+		Reduce input records=761
+		Reduce output records=1929
+		Spilled Records=1522
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=304
+		CPU time spent (ms)=4470
+		Physical memory (bytes) snapshot=1052487680
+		Virtual memory (bytes) snapshot=7975182336
+		Total committed heap usage (bytes)=1069023232
+
+---------------------------------------
+Results:
+precision :	[0.6, 0.9459459459459459]
+recall :	[0.6, 0.9459459459459459]
+fMeasure :	[0.6, 0.9459459459459459]
+---------------------------------------
+Analysis
+
+False-Negative Examples:
+arm, part	predicted as: False actual value is: True
+attempt, effort	predicted as: False actual value is: True
+effort, attempt	predicted as: False actual value is: True
+end, thought	predicted as: False actual value is: True
+fact, thought	predicted as: False actual value is: True
+
+True-Negative Examples:
+govern, june	predicted as: False actual value is: False
+govern, practic	predicted as: False actual value is: False
+fact, freud	predicted as: False actual value is: False
+jefferson, ardor	predicted as: False actual value is: False
+king, price	predicted as: False actual value is: False
+
+
+True-Positive Examples:
+card, book	predicted as: True actual value is: True
+care, action	predicted as: True actual value is: True
+case, fact	predicted as: True actual value is: True
+cedar, tree	predicted as: True actual value is: True
+faith, religion	predicted as: True actual value is: True
+
+
+False-Positive Examples:
+
+bar, talent	predicted as: True actual value is: False
+be, attempt	predicted as: True actual value is: False
+british, war	predicted as: True actual value is: False
+captain, birch	predicted as: True actual value is: False
+case, crown	predicted as: True actual value is: False
+
+

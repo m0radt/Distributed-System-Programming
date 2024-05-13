@@ -1,4 +1,4 @@
-morad taya (322540964)  Omer presler(324179795)
+morad taya   Omer presler
 
 Execution Instructions:
 	1. Compile the helper then Local projects by running this command: "mvn clean install package"
